@@ -10,6 +10,9 @@
   "installOptions": {
     "NODE_ENV": true
   },
+  "buildOptions": {
+    "baseUrl": "/"
+  },
   "devOptions": {
     "out": "dist"
   }
