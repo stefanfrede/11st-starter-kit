@@ -36,7 +36,7 @@ npm run build
 Your app is ready to be deployed!
 
 To increase the production performance
-[@snowpack/plugin-parcel](https://github.com/pikapkg/create-snowpack-app/tree/master/packages/plugin-parcel)
+[@snowpack/plugin-webpack](https://github.com/pikapkg/snowpack/tree/%40snowpack/app-template-11ty%401.7.4/packages/%40snowpack/plugin-webpack)
 is added to the `snowpack.config.json` config file.
 
 ## Netlify

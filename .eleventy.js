@@ -45,7 +45,7 @@ module.exports = function (config) {
   return {
     dir: {
       input: 'src',
-      output: 'src/_output',
+      output: 'build',
     },
     passthroughFileCopy: true,
     templateFormats: ['md', 'liquid'],

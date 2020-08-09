@@ -4,8 +4,8 @@ web_modules
 
 # build artefacts
 .build
+build
 dist
-src/_output
 
 # secrets
 .env

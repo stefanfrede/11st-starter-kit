@@ -3,11 +3,11 @@
   publish = "dist"
 
 [context.production]
-  environment = { NODE_VERSION = "12.17.0", NODE_ENV = "production" }
+  environment = { NODE_VERSION = "12.18.1", NODE_ENV = "production" }
 
 [dev]
   command = "npm start"
-  publish = "dist"
+  publish = "build"
   port = 3000
   targetPort = 8080
   framework = "#custom"
