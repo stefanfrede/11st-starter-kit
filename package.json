@@ -61,7 +61,7 @@
     "@babel/preset-env": "^7.11.5",
     "@snowpack/plugin-build-script": "^2.0.6",
     "@snowpack/plugin-run-script": "^2.1.1",
-    "@snowpack/plugin-webpack": "^2.0.6",
+    "@snowpack/plugin-webpack": "^2.0.8",
     "@tailwindcss/typography": "^0.2.0",
     "canvas-confetti": "^1.2.0",
     "cssnano": "^4.1.10",
@@ -73,7 +73,7 @@
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "rimraf": "^3.0.2",
-    "snowpack": "^2.10.1",
-    "tailwindcss": "^1.8.4"
+    "snowpack": "^2.10.2",
+    "tailwindcss": "^1.8.5"
   }
 }
