@@ -12,7 +12,12 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
     },
+    inset: {
+      '-20': '-5rem',
+    },
   },
-  variants: {},
+  variants: {
+    inset: ['responsive', 'focus'],
+  },
   plugins: [require('@tailwindcss/typography')],
 };
