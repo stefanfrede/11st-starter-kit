@@ -15,7 +15,7 @@ module.exports = function (config) {
   config.setLibrary('liquid', liquidEngine);
 
   // Layout aliases
-  config.addLayoutAlias('default', 'layouts/base.liquid');
+  config.addLayoutAlias('default', 'layouts/base.html');
 
   // Static assets to pass through
   config.addPassthroughCopy('./src/fonts');
@@ -48,8 +48,9 @@ module.exports = function (config) {
       output: 'build',
     },
     passthroughFileCopy: true,
-    templateFormats: ['md', 'liquid'],
+    templateFormats: ['html', 'md'],
     htmlTemplateEngine: 'liquid',
+    dataTemplateEngine: 'liquid',
     markdownTemplateEngine: 'liquid',
   };
 };
