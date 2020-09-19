@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>
+      {{ title }}
+    </title>
+
+    <meta
+      name="description"
+      content="11ty + Snowpack + Tailwind CSS"
+    />
+
+    <link rel="icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body class="min-h-screen bg-white">
+    {% include "partials/site-head.html" %}
+
+    <main tabindex="-1" id="main-content">
+      {% block content %}{% endblock %}
+    </main>
+
+    <script type="module" src="/_dist_/index.js"></script>
+  </body>
+</html>

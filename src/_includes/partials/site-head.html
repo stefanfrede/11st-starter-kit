@@ -1,0 +1,42 @@
+<a
+  href="#main-content"
+  class="absolute -top-20 focus:top-0 left-0 p-2 md:p-4 z-50 text-white focus:text-gray-900"
+>
+  Skip to main
+</a>
+
+<header
+  role="banner"
+  class="flex flex-col items-center justify-center py-10 text-gray-900"
+>
+  <a
+    href="/"
+    aria-label="{{ site.name }}"
+    class="inline-flex items-center justify-center mb-10"
+  >
+    {% include "partials/logo.html" %}
+  </a>
+  <nav aria-label="Primary navigaton">
+    <ul class="flex space-x-10">
+      {% for item in navigation.items %}
+        {% if item.url == page.url %}
+          {% assign txtColor = 'text-gray-900' %}
+          {% assign current = 'aria-current="page"' %}
+        {% else %}
+          {% assign txtColor = 'text-gray-700' %}
+          {% assign current = '' %}
+        {% endif %}
+        <li>
+          <a
+            href="{{ item.url }}"
+            class="font-medium text-lg {{ txtColor }} hover:text-gray-900 transition duration-150 ease-in-out"
+            {{ current }}
+          >
+            {{ item.text }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
+
