@@ -1,0 +1,43 @@
+{% assign page_title = title | append: ' :: ' | append: site.name %}
+
+{% if site.name == title %} 
+  {% assign page_title = title %}
+{% endif %}
+
+{% assign site_title = site.name %}
+{% assign current_url = site.url | append: page.url %}
+
+{% unless social_image %}
+  {% assign social_image = site.url | append: '/images/social-share.png' %}
+{% endunless %}
+
+{% if meta.title %}
+  {% assign page_title = meta.title %}
+{% endif %}
+
+<title>
+  {{ page_title }}
+</title>
+
+<link rel="canonical" href="{{ current_url }}" />
+
+<meta property="og:site_name" content="{{ site_title }}" />
+<meta property="og:title" content="{{ page_title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ current_url }}" />
+
+{% if social_image %}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="{{ social_image }}" />
+  <meta name="twitter:image" content="{{ social_image }}" />
+  <meta property="og:image:alt" content="Page image for {{ site.name }}" />
+  <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+{% endif %}
+
+{% if meta.desc %}
+  <meta name="description" content="{{ meta.desc }}" />
+  <meta name="twitter:description" content="{{ meta.desc }}" />
+  <meta property="og:description" content="{{ meta.desc }}" />
+{% endif %}
+
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />

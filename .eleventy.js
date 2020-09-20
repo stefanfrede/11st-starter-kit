@@ -8,24 +8,16 @@ const liquidOptions = {
 
 const liquidEngine = new Liquid(liquidOptions);
 
-const ErrorOverlay = require('eleventy-plugin-error-overlay');
 const fs = require('fs');
 
 module.exports = function (config) {
   config.setLibrary('liquid', liquidEngine);
-
-  // Layout aliases
-  config.addLayoutAlias('default', 'layouts/base.html');
 
   // Static assets to pass through
   config.addPassthroughCopy('./src/fonts');
   config.addPassthroughCopy('./src/images');
   config.addPassthroughCopy('./src/styles');
   config.addPassthroughCopy('./src/robots.txt');
-
-  // 11ty error overlay
-  // https://github.com/stevenpetryk/eleventy-plugin-error-overlay
-  config.addPlugin(ErrorOverlay);
 
   // 404
   config.setBrowserSyncConfig({

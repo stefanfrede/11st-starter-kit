@@ -5,22 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>
-      {{ title }}
-    </title>
+    {% include "partials/meta-info.html" %}
 
-    <meta
-      name="description"
-      content="11ty + Snowpack + Tailwind CSS"
-    />
-
-    <link rel="icon" href="/images/favicon.png" />
     <link rel="stylesheet" href="/styles/index.css" />
   </head>
-  <body class="min-h-screen bg-gray-100">
+  <body class="max-w-6xl min-h-screen mx-auto px-4 sm:px-6 lg:px-8 bg-gray-100">
     {% include "partials/site-head.html" %}
 
-    <main tabindex="-1" id="main-content">
+    <main
+      id="main-content"
+      class="prose prose-lg max-w-3xl mx-auto"
+      tabindex="-1"
+    >
       {% block content %}{% endblock %}
     </main>
 
