@@ -11,9 +11,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
-    },
-    inset: {
-      '-20': '-5rem',
+      inset: {
+        '-20': '-5rem',
+      },
     },
   },
   variants: {
