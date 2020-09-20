@@ -30,6 +30,17 @@
     "maintained node versions",
     "> 5%"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md,html,css}": "prettier --write",
+    "*.css": "stylelint --fix",
+    "*.js": "eslint --fix"
+  },
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf build && rimraf dist",
@@ -50,6 +61,8 @@
     "setup": "npm install && npm run validate"
   },
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "babel-eslint": "^10.1.0",
     "browserslist": "^4.14.3",
     "core-js": "^3.6.5",
@@ -58,6 +71,8 @@
     "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "stylelint": "^13.7.1",
     "stylelint-config-prettier": "^8.0.2",
