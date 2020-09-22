@@ -5,38 +5,126 @@
   Skip to main
 </a>
 
-<header
-  role="banner"
-  class="flex flex-col items-center justify-center py-10 text-gray-900"
->
-  <a
-    href="/"
-    aria-label="{{ site.name }}"
-    class="inline-flex items-center justify-center mb-10"
+<div class="max-w-3xl mx-auto">
+  <header
+    role="banner"
+    class="border-b-2 border-gray-200 mb-8"
+    x-data="{ open: false }"
   >
-    {% include "partials/logo.html" %}
-  </a>
-  <nav aria-label="Primary navigaton">
-    <ul class="flex space-x-10">
-      {% for item in navigation.items %}
-        {% if item.url == page.url %}
-          {% assign txtColor = 'text-gray-900' %}
-          {% assign current = 'aria-current="page"' %}
-        {% else %}
-          {% assign txtColor = 'text-gray-700' %}
-          {% assign current = '' %}
-        {% endif %}
+    <div class="flex justify-between h-16">
+      <a
+        href="/"
+        aria-label="{{ site.name }}"
+        class="inline-flex flex-shrink-0 items-center space-x-2 sm:space-x-3"
+      >
+        {% include "partials/logo.html" %}
+      </a>
+      <nav class="hidden md:inline-flex">
+        <ul class="flex space-x-8 -mb-2px">
+          {% for item in navigation.items %} {% if item.url == page.url %} {%
+          assign highlight = 'border-gray-600 text-gray-900
+          focus:border-gray-700' %} {% assign current = 'aria-current="page"' %}
+          {% else %} {% assign highlight = 'border-transparent text-gray-600
+          hover:text-gray-700 hover:border-gray-500 focus:text-gray-700
+          focus:border-gray-500' %} {% assign current = '' %} {% endif %}
+          <li class="flex">
+            <a
+              href="{{ item.url }}"
+              class="inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium leading-5 focus:outline-none transition duration-150 ease-in-out {{ highlight }}"
+              {{
+              current
+              }}
+            >
+              {{ item.text }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="-mr-2 flex items-center sm:hidden">
+        <button
+          @click="open = !open"
+          type="button"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-700 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 focus:text-gray-700 transition duration-150 ease-in-out"
+          x-bind:aria-label="open ? 'Close main menu' : 'Main menu'"
+          x-bind:aria-expanded="open"
+        >
+          <svg
+            x-state:on="Menu open"
+            x-state:off="Menu closed"
+            :class="{ 'hidden': open, 'block': !open }"
+            class="h-6 w-6"
+            aria-hidden="true"
+            focusable="false"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="currentColor"
+              d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12
+                12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0
+                160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12
+                12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0
+                160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12
+                12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"
+            />
+          </svg>
+          <svg
+            x-state:on="Menu open"
+            x-state:off="Menu closed"
+            :class="{ 'hidden': !open, 'block': open }"
+            class="hidden h-6 w-6"
+            aria-hidden="true"
+            focusable="false"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              fill="currentColor"
+              d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34
+              0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160
+              208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68
+              125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68
+              363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23
+              16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34
+              6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34
+              0-22.58L207.6 256z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <nav
+      x-description="Mobile menu, toggle classes based on menu state."
+      x-state:on="Menu open"
+      x-state:off="Menu closed"
+      :class="{ 'block': open, 'hidden': !open }"
+      class="sm:hidden"
+    >
+      <ul class="pt-2 pb-3">
+        {% for item in navigation.items %} {% if item.url == page.url %} {%
+        assign highlight = 'border-gray-500 text-gray-800 bg-gray-100
+        focus:text-gray-900 focus:bg-gray-100 focus:border-gray-700' %} {%
+        assign current = 'aria-current="page"' %} {% else %} {% assign highlight
+        = 'border-transparent text-gray-700 hover:text-gray-800
+        hover:bg-gray-100 hover:border-gray-500 focus:text-gray-800
+        focus:bg-gray-100 focus:border-gray-500' %} {% assign current = '' %} {%
+        endif %}
         <li>
           <a
             href="{{ item.url }}"
-            class="font-medium text-lg {{ txtColor }} hover:text-gray-900 transition duration-150 ease-in-out"
-            {{ current }}
+            class="block pl-3 pr-4 py-2 border-l-4 text-lg font-medium focus:outline-none transition duration-150 ease-in-out {{ highlight }}"
+            {{
+            current
+            }}
           >
             {{ item.text }}
           </a>
         </li>
-      {% endfor %}
-    </ul>
-  </nav>
-</header>
-
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+</div>

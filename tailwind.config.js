@@ -14,6 +14,9 @@ module.exports = {
       inset: {
         '-20': '-5rem',
       },
+      margin: {
+        '-2px': '-2px',
+      },
     },
   },
   variants: {

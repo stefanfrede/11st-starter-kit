@@ -1,9 +1,8 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
-
+// eslint-disable-next-line
 import confetti from 'canvas-confetti';
+
+// eslint-disable-next-line
+import 'alpinejs';
 
 const canvas = document.getElementById('canvas');
 
