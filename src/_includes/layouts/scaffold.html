@@ -7,7 +7,14 @@
 
     {% include "partials/meta-info.html" %}
 
-    <link rel="stylesheet" href="/styles/index.css" />
+    <link
+      rel="stylesheet"
+      media="print"
+      href="/styles/fonts.css?{{ hash }}"
+      onload="this.media='all'"
+    />
+
+    <link rel="stylesheet" href="/styles/index.css?{{ hash }}" />
   </head>
   <body class="min-h-screen bg-gray-100">
     <div class="min-h-screen max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-white">
