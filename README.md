@@ -5,7 +5,7 @@
 
 [11ty](https://www.11ty.dev/), powered by [Snowpack](https://www.snowpack.dev/)
 with [Tailwind CSS](https://tailwindcss.com) and
-[Alpine.js](https://tailwindcss.com).
+[Alpine.js](https://github.com/alpinejs/alpine/).
 
 ## Install Dependencies
 
