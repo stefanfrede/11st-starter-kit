@@ -2,11 +2,7 @@
 import confetti from 'canvas-confetti';
 
 // eslint-disable-next-line
-import alpinejs from 'alpinejs';
-
-// Quick & dirty way to prevent webpack from tree shaking Alpine.js
-const body = document.querySelector('body');
-body.setAttribute('data-alpinejs', alpinejs.version);
+import 'alpinejs';
 
 const canvas = document.getElementById('canvas');
 

@@ -15,7 +15,10 @@
       }
     ],
     [
-      "@snowpack/plugin-webpack", {}
+      "@snowpack/plugin-optimize", {
+        "minifyCSS": false,
+        "target": "es2020"
+      }
     ]
   ],
   "installOptions": {

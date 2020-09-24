@@ -63,6 +63,7 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@snowpack/plugin-optimize": "^0.2.1",
     "babel-eslint": "^10.1.0",
     "browserslist": "^4.14.3",
     "core-js": "^3.6.5",
@@ -86,7 +87,6 @@
     "@babel/preset-env": "^7.11.5",
     "@snowpack/plugin-build-script": "^2.0.7",
     "@snowpack/plugin-run-script": "^2.1.2",
-    "@snowpack/plugin-webpack": "^2.0.12",
     "@tailwindcss/typography": "^0.2.0",
     "alpinejs": "^2.7.0",
     "canvas-confetti": "^1.2.0",

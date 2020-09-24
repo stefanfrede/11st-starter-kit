@@ -23,10 +23,12 @@ npm start
 
 Open http://localhost:8080 to view it in the browser.
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+The page will reload if you make file changes.
 
 ### Production
+
+To increase the production performance builds are optimized via
+[@snowpack/plugin-optimize](https://github.com/pikapkg/snowpack/tree/master/plugins/plugin-optimize).
 
 ```bash
 # builds a static copy of your site to the `dist/` folder.
@@ -40,10 +42,7 @@ npm run build:serve
 
 Open http://localhost:8080 to view it in the browser.
 
-If you are happy with what you are seeing your code is ready to be deployed!
-
-To increase the production performance builds are optimized via
-[@snowpack/plugin-webpack](https://github.com/pikapkg/snowpack/tree/%40snowpack/app-template-11ty%401.7.4/packages/%40snowpack/plugin-webpack).
+Your code is now ready to be deployed!
 
 ## Netlify
 
