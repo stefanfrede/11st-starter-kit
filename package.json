@@ -45,7 +45,7 @@
     "clean": "rimraf build && rimraf dist",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "start": "run-s clean start:*",
-    "start:snowpack": "snowpack dev",
+    "start:snowpack": "snowpack dev --open none",
     "build": "run-s clean build:snowpack",
     "build:snowpack": "snowpack build",
     "build:serve": "serve --no-clipboard --listen 8080 dist",
