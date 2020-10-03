@@ -1,8 +1,8 @@
-@import 'tailwindcss/base';
+@tailwind base;
 
-@import 'tailwindcss/components';
+@tailwind components;
 
-@import 'tailwindcss/utilities';
+@tailwind utilities;
 
 #canvas {
   display: block;

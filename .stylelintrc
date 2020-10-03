@@ -19,7 +19,8 @@
         'apply',
         'responsive',
         'variants',
-        'screen'
+        'screen',
+        'tailwind'
       ]
     }]
   }
