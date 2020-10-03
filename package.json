@@ -97,7 +97,7 @@
     "postcss-100vh-fix": "^1.0.2",
     "postcss-cli": "^8.0.0",
     "rimraf": "^3.0.2",
-    "snowpack": "^2.12.1",
+    "snowpack": "^2.13.1",
     "tailwindcss": "^1.8.10"
   }
 }
