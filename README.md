@@ -38,7 +38,7 @@ npm run build
 
 ```bash
 # serve the content from the `dist/` folder.
-npm run build:serve
+npm run serve
 ```
 
 Open http://localhost:8080 to view it in the browser.
