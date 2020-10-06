@@ -39,7 +39,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,md,html,css}": "prettier --write",
+    "*.{md,html}": "prettier --write",
     "*.css": "stylelint --fix",
     "*.js": "eslint --fix"
   },
@@ -80,7 +80,7 @@
     "serve": "^11.3.2",
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0"
   },
   "dependencies": {
