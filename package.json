@@ -39,9 +39,8 @@
     }
   },
   "lint-staged": {
-    "*.{md,html}": "prettier --write",
-    "*.css": "stylelint --fix",
-    "*.js": "eslint --fix"
+    "*.{css,js,html}": "stylelint --fix",
+    "*.{js,html}": "eslint --fix"
   },
   "sideEffects": false,
   "scripts": {
@@ -55,11 +54,9 @@
     "build:snowpack": "snowpack build",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --ext src/**/*.js,.html src/",
-    "lint:prettier": "prettier \"src/**/*.js\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
     "lint:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css src/**/*.scss",
     "format": "run-s format:*",
     "format:eslint": "eslint --ext src/**/*.js,.html src/ --fix",
-    "format:prettier": "prettier \"src/**/*.js\" --write",
     "format:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css --fix",
     "validate": "run-s build lint",
     "setup": "npm install && npm run validate"
