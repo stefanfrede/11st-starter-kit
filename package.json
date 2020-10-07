@@ -89,7 +89,7 @@
     "@babel/preset-env": "^7.11.5",
     "@snowpack/plugin-build-script": "^2.0.8",
     "@snowpack/plugin-optimize": "^0.2.3",
-    "@snowpack/plugin-run-script": "^2.1.4",
+    "@snowpack/plugin-run-script": "^2.1.5",
     "@tailwindcss/typography": "^0.2.0",
     "alpinejs": "^2.7.0",
     "autoprefixer": "^10.0.1",
@@ -100,7 +100,7 @@
     "postcss-100vh-fix": "^1.0.2",
     "postcss-cli": "^8.0.0",
     "rimraf": "^3.0.2",
-    "snowpack": "^2.13.2",
-    "tailwindcss": "^1.8.10"
+    "snowpack": "^2.13.3",
+    "tailwindcss": "^1.8.11"
   }
 }
