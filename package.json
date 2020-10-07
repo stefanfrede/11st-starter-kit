@@ -46,6 +46,7 @@
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf build && rimraf dist",
+    "lighthouse": "lighthouse http://localhost:8080 --output=html --output-path=./report.html --view",
     "serve": "serve --no-clipboard --listen 8080 dist",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "start": "run-s clean start:*",
@@ -75,6 +76,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.3.0",
+    "lighthouse": "^6.4.1",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "serve": "^11.3.2",

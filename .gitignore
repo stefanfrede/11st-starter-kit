@@ -12,6 +12,7 @@ dist
 
 # logs
 *.log
+report.html
 
 # macOS related files
 .DS_Store
