@@ -1,18 +1,18 @@
-<article class="mb-8">
-  <div class="bg-gray-900 text-gray-100 p-4">
-    <h2
-      class="text-2xl leading-8 font-extrabold tracking-tight sm:text-3xl sm:leading-9"
-    >
-      {{ cta.title }}
+<section class="bg-gray-700">
+  <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+    <h2 class="text-3xl leading-9 font-extrabold text-gray-100 sm:text-4xl sm:leading-10">
+      <span class="block">
+        {{ cta.title }}
+      </span>
     </h2>
-    <p class="mt-3 text-lg leading-7">{{ cta.summary }}</p>
-    <div class="mt-3 text-right">
-      <a
-        href="{{ cta.buttonUrl }}"
-        class="inline-flex items-center px-4 py-2 border border-gray-300 text-base leading-6 font-medium rounded-md text-gray-700 uppercase bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-100 transition ease-in-out duration-150"
-      >
-        {{ cta.buttonText }}
-      </a>
-    </div>
+    <p class="mt-4 text-lg leading-6 text-gray-200">
+      {{ cta.summary }}
+    </p>
+    <a
+      href="{{ cta.buttonUrl }}"
+      class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-xl leading-8 font-black uppercase rounded-md text-gray-600 bg-gray-100 hover:text-gray-500 hover:bg-gray-100 focus:text-gray-500 focus:bg-gray-100 transition duration-150 ease-in-out sm:w-auto"
+    >
+      {{ cta.buttonText }}
+    </a>
   </div>
-</article>
+</section>

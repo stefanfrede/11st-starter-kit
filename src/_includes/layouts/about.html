@@ -1,21 +1,23 @@
 {% layout 'base.html' %}
 
 {% block content %}
-<article class="mb-8">
-  <h1
-    class="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl sm:leading-10"
-  >
-    {{ intro.title }}
-  </h1>
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="py-10">
+    <h2
+      class="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl sm:leading-10"
+    >
+      {{ intro.title }}
+    </h2>
 
-  <p class="text-xl text-gray-700 leading-8 mb-8">
-    {{ intro.desc }}
-  </p>
+    <p class="text-xl text-gray-700 leading-8 mb-8">
+      {{ intro.desc }}
+    </p>
 
-  <div class="prose prose-lg text-gray-600">
-    {{ content }}
+    <div class="prose prose-lg text-gray-600">
+      {{ content }}
+    </div>
   </div>
-</article>
+</section>
 
 {% include "partials/cta.html" %}
 {% endblock %}

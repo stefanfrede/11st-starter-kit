@@ -1,0 +1,27 @@
+<a
+  href="#main-content"
+  class="absolute -top-20 focus:top-0 left-0 p-2 md:p-4 z-50 text-white focus:text-gray-900"
+>
+  Skip to main
+</a>
+
+<header
+  role="banner"
+  class="border-b border-gray-200"
+  x-data="{ open: false }"
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <a
+        href="/"
+        aria-label="{{ site.name }}"
+        class="inline-flex flex-shrink-0 items-center space-x-2 sm:space-x-3"
+      >
+        {% include "partials/site-header-logo.html" %}
+      </a>
+      {% include "partials/site-header-menu.html" %}
+      {% include "partials/site-header-menu-mobile-toggle.html" %}
+    </div>
+    {% include "partials/site-header-menu-mobile.html" %}
+  </div>
+</header>

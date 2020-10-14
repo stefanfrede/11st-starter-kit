@@ -1,0 +1,22 @@
+<nav class="hidden md:inline-flex">
+  <ul class="flex space-x-8 -mb-1px">
+    {% for item in navigation.items %}
+      {% if item.url == page.url %}
+        {% assign highlight = 'border-gray-600 text-gray-900 focus:border-gray-700' %}
+        {% assign current = 'aria-current="page"' %}
+      {% else %}
+        {% assign highlight = 'border-transparent text-gray-600 hover:text-gray-700 hover:border-gray-500 focus:text-gray-700 focus:border-gray-500' %}
+        {% assign current = '' %}
+      {% endif %}
+      <li class="flex">
+        <a
+          href="{{ item.url }}"
+          class="inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium leading-5 focus:outline-none transition duration-150 ease-in-out {{ highlight }}"
+          {{ current }}
+        >
+          {{ item.text }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

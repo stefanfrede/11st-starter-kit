@@ -1,23 +1,25 @@
 {% layout 'base.html' %}
 
 {% block content %}
-<article class="mb-8">
-  <h1
-    class="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl sm:leading-10"
-  >
-    {{ intro.title }}
-  </h1>
-
-  <p class="text-xl text-gray-700 leading-8 mb-8">
-    {{ intro.desc }}
-  </p>
-
-  <div class="px-4 py-8 sm:px-0">
-    <div
-      class="flex items-center justify-center border-4 border-dashed border-gray-200 rounded-lg h-64"
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="py-10">
+    <h2
+      class="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl sm:leading-10"
     >
-      Contact form
+      {{ intro.title }}
+    </h2>
+
+    <p class="text-xl text-gray-700 leading-8 mb-8">
+      {{ intro.desc }}
+    </p>
+
+    <div class="px-4 py-8 sm:px-0">
+      <div
+        class="flex items-center justify-center border-4 border-dashed border-gray-200 rounded-lg h-64"
+      >
+        Contact form
+      </div>
     </div>
   </div>
-</article>
+</section>
 {% endblock %}

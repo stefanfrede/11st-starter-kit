@@ -8,11 +8,14 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      gridTemplateRows: {
+        layout: 'auto 1fr auto',
+      },
       inset: {
         '-20': '-5rem',
       },
       margin: {
-        '-2px': '-2px',
+        '-1px': '-1px',
       },
     },
   },
