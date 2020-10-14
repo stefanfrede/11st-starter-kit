@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      fontSize: {
+        '7xl': '5rem',
+      },
       gridTemplateRows: {
         layout: 'auto 1fr auto',
       },

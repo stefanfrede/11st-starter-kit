@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="text-gray-900 antialiased leading-tight" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    {% include "partials/meta-info.html" %}
+
+    <link
+      rel="stylesheet"
+      media="print"
+      href="/styles/fonts.css?{{ hash }}"
+      onload="this.media='all'"
+    />
+
+    <link rel="stylesheet" href="/styles/index.css?{{ hash }}" />
+  </head>
+  <body class="min-h-screen bg-white">
+    {% block content %}{% endblock %}
+  </body>
+</html>

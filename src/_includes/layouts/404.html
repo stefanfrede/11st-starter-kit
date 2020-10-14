@@ -1,7 +1,20 @@
-{% layout 'base.html' %}
+{% layout 'plain.html' %}
 
 {% block content %}
-  <div class="text-center">
-    {{ content }}
+<main class="flex items-center justify-center min-h-screen bg-red-700">
+  <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+    <h2 class="animate-pulse text-7xl leading-10 font-extrabold text-white">
+      404
+    </h2>
+    <p class="mt-4 text-lg leading-6 text-red-200">
+      Take me back
+      <a
+        href="/"
+        class="font-bold underline transition duration-150 ease-in-out"
+      >
+        home
+      </a>
+    </p>
   </div>
+</main>
 {% endblock %}
