@@ -21,11 +21,6 @@ module.exports = function (config) {
   config.addPassthroughCopy('./src/manifest.json');
   config.addPassthroughCopy('./src/robots.txt');
 
-  config.addShortcode('hash', function () {
-    const uint32 = self.crypto.getRandomValues(new Uint32Array(1))[0];
-    return uint32.toString(16);
-  });
-
   // 404
   config.setBrowserSyncConfig({
     callbacks: {
