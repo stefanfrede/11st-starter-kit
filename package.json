@@ -88,6 +88,7 @@
     "@babel/preset-env": "^7.11.5",
     "@snowpack/plugin-build-script": "^2.0.8",
     "@snowpack/plugin-optimize": "^0.2.3",
+    "@snowpack/plugin-postcss": "^1.0.5",
     "@snowpack/plugin-run-script": "^2.1.5",
     "@tailwindcss/typography": "^0.2.0",
     "alpinejs": "^2.7.0",
