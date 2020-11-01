@@ -17,11 +17,11 @@
         aria-label="{{ site.name }}"
         class="inline-flex flex-shrink-0 items-center space-x-2 sm:space-x-3"
       >
-        {% include "partials/site-header-logo.html" %}
+        {% render "partials/site-header-logo.html" %}
       </a>
-      {% include "partials/site-header-menu.html" %}
-      {% include "partials/site-header-menu-mobile-toggle.html" %}
+      {% render "partials/site-header-menu.html" %}
+      {% render "partials/site-header-menu-mobile-toggle.html" %}
     </div>
-    {% include "partials/site-header-menu-mobile.html" %}
+    {% render "partials/site-header-menu-mobile.html" %}
   </div>
 </header>

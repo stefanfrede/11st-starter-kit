@@ -1,20 +1,3 @@
-{% assign page_title = title | append: ' :: ' | append: site.name %}
-
-{% if site.name == title %} 
-  {% assign page_title = title %}
-{% endif %}
-
-{% assign site_title = site.name %}
-{% assign current_url = site.url | append: page.url %}
-
-{% unless social_image %}
-  {% assign social_image = site.url | append: '/images/social-share.png' %}
-{% endunless %}
-
-{% if meta.title %}
-  {% assign page_title = meta.title %}
-{% endif %}
-
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -34,14 +17,14 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="{{ social_image }}" />
   <meta name="twitter:image" content="{{ social_image }}" />
-  <meta property="og:image:alt" content="Page image for {{ site.name }}" />
-  <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+  <meta property="og:image:alt" content="Page image for {{ site_name }}" />
+  <meta name="twitter:image:alt" content="Page image for {{ site_name }}" />
 {% endif %}
 
-{% if meta.desc %}
-  <meta name="description" content="{{ meta.desc }}" />
-  <meta name="twitter:description" content="{{ meta.desc }}" />
-  <meta property="og:description" content="{{ meta.desc }}" />
+{% if meta_desc %}
+  <meta name="description" content="{{ meta_desc }}" />
+  <meta name="twitter:description" content="{{ meta_desc }}" />
+  <meta property="og:description" content="{{ meta_desc }}" />
 {% endif %}
 
 <meta name="theme-color" content="#4a5568" />
