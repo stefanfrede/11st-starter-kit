@@ -51,10 +51,10 @@
     "dev": "snowpack dev",
     "build": "snowpack build",
     "lint": "run-s lint:*",
-    "lint:eslint": "eslint --ext src/**/*.js,.html src/",
-    "lint:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css src/**/*.scss",
+    "lint:eslint": "eslint --ext .js --ext .html src/",
+    "lint:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css",
     "format": "run-s format:*",
-    "format:eslint": "eslint --ext src/**/*.js,.html src/ --fix",
+    "format:eslint": "eslint --ext .js --ext .html src/ --fix",
     "format:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css --fix",
     "validate": "run-s build lint",
     "setup": "npm install && npm run validate"
