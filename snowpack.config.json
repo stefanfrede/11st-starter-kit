@@ -21,10 +21,10 @@
     "NODE_ENV": true
   },
   "buildOptions": {
-    "clean": true
+    "clean": true,
+    "out": "dist"
   },
   "devOptions": {
-    "out": "dist",
     "hmrDelay": 300
   }
 }
