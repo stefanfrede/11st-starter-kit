@@ -1,17 +1,9 @@
-const { Liquid } = require('liquidjs');
-
-const liquidOptions = {
-  extname: '.liquid',
-  strict_filters: true,
-  root: ['_includes'],
-};
-
-const liquidEngine = new Liquid(liquidOptions);
-
 const fs = require('fs');
 
 module.exports = function (config) {
-  config.setLibrary('liquid', liquidEngine);
+  config.setLiquidOptions({
+    dynamicPartials: true,
+  });
 
   // Static assets to pass through
   config.addPassthroughCopy('./src/fonts');
