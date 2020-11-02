@@ -19,7 +19,7 @@ the dependencies and validate that everything is running correctly.
 
 ```bash
 # runs the app in the development mode.
-npm start
+npm run dev
 ```
 
 Open http://localhost:8080 to view it in the browser.

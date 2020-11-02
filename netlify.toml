@@ -9,7 +9,7 @@
   environment = { NODE_VERSION = "12.19.0", NODE_ENV = "production", RUBY_VERSION = "2.7.1" }
 
 [dev]
-  command = "npm start"
+  command = "npm run dev"
   publish = "build"
   port = 3000
   targetPort = 8080
