@@ -44,14 +44,11 @@
   },
   "sideEffects": false,
   "scripts": {
-    "clean": "rimraf build && rimraf dist",
     "lighthouse": "lighthouse http://localhost:8080 --output=html --output-path=./report.html --view",
     "serve": "serve --no-clipboard --listen 8080 dist",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
-    "start": "run-s clean start:*",
-    "start:snowpack": "snowpack dev --open none",
-    "build": "run-s clean build:snowpack",
-    "build:snowpack": "snowpack build",
+    "start": "snowpack dev --open none",
+    "build": "snowpack build",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --ext src/**/*.js,.html src/",
     "lint:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css src/**/*.scss",
@@ -98,7 +95,6 @@
     "postcss": "^8.1.4",
     "postcss-100vh-fix": "^1.0.2",
     "postcss-cli": "^8.2.0",
-    "rimraf": "^3.0.2",
     "snowpack": "^2.16.1",
     "tailwindcss": "^1.9.6"
   }

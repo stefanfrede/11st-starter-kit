@@ -20,6 +20,9 @@
   "installOptions": {
     "NODE_ENV": true
   },
+  "buildOptions": {
+    "clean": true
+  },
   "devOptions": {
     "out": "dist",
     "hmrDelay": 300
