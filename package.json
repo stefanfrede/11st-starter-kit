@@ -47,7 +47,7 @@
     "lighthouse": "lighthouse http://localhost:8080 --output=html --output-path=./report.html --view",
     "serve": "serve --no-clipboard --listen 8080 dist",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
-    "start": "snowpack dev --open none",
+    "start": "snowpack dev",
     "build": "snowpack build",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --ext src/**/*.js,.html src/",
