@@ -66,8 +66,8 @@
     "@commitlint/config-conventional": "^11.0.0",
     "babel-eslint": "^10.1.0",
     "browserslist": "^4.14.6",
-    "core-js": "^3.6.5",
-    "eslint": "^7.12.1",
+    "core-js": "^3.7.0",
+    "eslint": "^7.13.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-import": "^2.22.1",
@@ -87,7 +87,7 @@
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@snowpack/plugin-build-script": "^2.0.11",
-    "@snowpack/plugin-optimize": "^0.2.7",
+    "@snowpack/plugin-optimize": "^0.2.8",
     "@snowpack/plugin-postcss": "^1.0.7",
     "@snowpack/plugin-run-script": "^2.2.0",
     "@tailwindcss/typography": "^0.2.0",
@@ -96,11 +96,11 @@
     "canvas-confetti": "^1.3.0",
     "nanoid": "^3.1.16",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.1.4",
+    "postcss": "^8.1.6",
     "postcss-100vh-fix": "^1.0.2",
     "postcss-cli": "^8.2.0",
     "rimraf": "^3.0.2",
-    "snowpack": "^2.16.1",
+    "snowpack": "^2.17.0",
     "tailwindcss": "^1.9.6"
   }
 }
