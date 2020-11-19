@@ -1,15 +1,18 @@
+const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   future: 'all',
   purge: ['./src/**/*.html', './src/**/*.md'],
   theme: {
+    colors: {
+      black: colors.black,
+      gray: colors.coolGray,
+      white: colors.white,
+    },
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
-      fontSize: {
-        '7xl': '5rem',
       },
       gridTemplateRows: {
         layout: 'auto 1fr auto',
