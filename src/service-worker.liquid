@@ -1,7 +1,6 @@
 ---
 permalink: service-worker.js
 ---
-
 const VERSION = '{{ nanoid }}';
 
 const CACHE_KEYS = {
@@ -9,10 +8,7 @@ const CACHE_KEYS = {
   RUNTIME: `runtime-${VERSION}`,
 };
 
-// URLS that we don’t want to end up in the cache
-const EXCLUDED_URLS = [];
-
-// URLS that we want to be cached when the worker is installed
+// Assets to cache
 const PRE_CACHE_URLS = [
   '/',
   '/404.html',
@@ -34,74 +30,79 @@ const PRE_CACHE_URLS = [
   '/styles/index.css',
 ];
 
-// You might want to bypass a certain host
+// Assets to exclude from caching
+const EXCLUDED_URLS = [];
+
+// Array of ignored hosts
 const IGNORED_HOSTS = ['localhost'];
 
-/**
- * Takes an array of strings and puts them in a named cache store
- *
- * @param {String} cacheName
- * @param {Array} items=[]
- */
-const addItemsToCache = function (cacheName, items = []) {
-  caches.open(cacheName).then((cache) => cache.addAll(items));
-};
-
-self.addEventListener('install', (e) => {
-  e.waitUntil(addItemsToCache(CACHE_KEYS.PRE_CACHE, PRE_CACHE_URLS));
+// Cache static assets
+self.addEventListener('install', function (event) {
+  event.waitUntil(
+    caches.open(CACHE_KEYS.PRE_CACHE).then(function (cache) {
+      return cache.addAll(PRE_CACHE_URLS);
+    }),
+  );
 });
 
-self.addEventListener('activate', (e) => {
-  // Look for any old caches that don't match our set and clear them out
-  e.waitUntil(
+// Clean-up old caches
+self.addEventListener('activate', function (event) {
+  event.waitUntil(
     caches
       .keys()
-      .then((cacheNames) => {
-        return cacheNames.filter(
-          (item) => !Object.values(CACHE_KEYS).includes(item),
-        );
+      .then(function (cacheNames) {
+        return cacheNames.filter(function (item) {
+          return !Object.values(CACHE_KEYS).includes(item);
+        });
       })
-      .then((itemsToDelete) => {
+      .then(function (itemsToDelete) {
         return Promise.all(
-          itemsToDelete.map((item) => {
+          itemsToDelete.map(function (item) {
             return caches.delete(item);
           }),
         );
       })
-      .then(() => self.clients.claim()),
+      .then(function () {
+        return self.clients.claim();
+      }),
   );
 });
 
-self.addEventListener('fetch', (e) => {
-  const { hostname } = new URL(e.request.url);
+// Update caches
+self.addEventListener('fetch', function (event) {
+  const { hostname } = new URL(event.request.url);
 
-  // Check we don't want to ignore this host
+  // Check for ignored hosts
   if (IGNORED_HOSTS.indexOf(hostname) >= 0) {
     return;
   }
 
-  // Check we don't want to ignore this URL
-  if (EXCLUDED_URLS.some((page) => e.request.url.indexOf(page) > -1)) {
+  const getPageUrl = function (url) {
+    return event.request.url.indexOf(url) > -1;
+  };
+
+  // Check for excluded URLs
+  if (EXCLUDED_URLS.some(getPageUrl)) {
     return;
   }
 
-  e.respondWith(
-    caches.match(e.request).then((cachedResponse) => {
-      // Item found in cache so return
+  event.respondWith(
+    caches.match(event.request).then(function (cachedResponse) {
+      // If a cached response was found return it
       if (cachedResponse) {
         return cachedResponse;
       }
 
-      // Nothing found so load up the request from the network
-      return caches.open(CACHE_KEYS.RUNTIME).then((cache) => {
-        return fetch(e.request)
-          .then((response) => {
-            // Put the new response in cache and return it
-            return cache.put(e.request, response.clone()).then(() => {
+      // Load request from the network if no cached response was found
+      return caches.open(CACHE_KEYS.RUNTIME).then(function (cache) {
+        return fetch(event.request)
+          .then(function (response) {
+            // Add the new response to the cache and return it
+            return cache.put(event.request, response.clone()).then(function () {
               return response;
             });
           })
-          .catch(() => {
+          .catch(function () {
             return;
           });
       });
