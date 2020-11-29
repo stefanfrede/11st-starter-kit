@@ -36,7 +36,8 @@ const EXCLUDED_URLS = [];
 // Array of ignored hosts
 const IGNORED_HOSTS = ['localhost'];
 
-// Cache static assets
+// On install—as a dependency
+// https://web.dev/offline-cookbook/#on-install-as-dependency
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_KEYS.PRE_CACHE).then(function (cache) {
@@ -45,7 +46,8 @@ self.addEventListener('install', function (event) {
   );
 });
 
-// Clean-up old caches
+// On activate
+// https://web.dev/offline-cookbook/#on-activate
 self.addEventListener('activate', function (event) {
   event.waitUntil(
     caches
@@ -68,11 +70,12 @@ self.addEventListener('activate', function (event) {
   );
 });
 
-// Update caches
+// A combination of `Cache, falling back to network` and `Cache then network`
+// https://web.dev/offline-cookbook/#cache-falling-back-to-network
+// https://web.dev/offline-cookbook/#cache-then-network
 self.addEventListener('fetch', function (event) {
   const { hostname } = new URL(event.request.url);
 
-  // Check for ignored hosts
   if (IGNORED_HOSTS.indexOf(hostname) >= 0) {
     return;
   }
@@ -81,30 +84,21 @@ self.addEventListener('fetch', function (event) {
     return event.request.url.indexOf(url) > -1;
   };
 
-  // Check for excluded URLs
   if (EXCLUDED_URLS.some(getPageUrl)) {
     return;
   }
 
   event.respondWith(
-    caches.match(event.request).then(function (cachedResponse) {
-      // If a cached response was found return it
-      if (cachedResponse) {
-        return cachedResponse;
+    caches.match(event.request).then(function (response) {
+      if (response) {
+        return response;
       }
 
-      // Load request from the network if no cached response was found
       return caches.open(CACHE_KEYS.RUNTIME).then(function (cache) {
-        return fetch(event.request)
-          .then(function (response) {
-            // Add the new response to the cache and return it
-            return cache.put(event.request, response.clone()).then(function () {
-              return response;
-            });
-          })
-          .catch(function () {
-            return;
-          });
+        return fetch(event.request).then(function (response) {
+          cache.put(event.request, response.clone());
+          return response;
+        });
       });
     }),
   );
