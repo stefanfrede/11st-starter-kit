@@ -1,21 +1,17 @@
 ---
 permalink: service-worker.js
 ---
-const VERSION = '{{ nanoid }}';
+const {
+  excludedUrls: EXCLUDED_URLS,
+  ignoredHosts: IGNORED_HOSTS,
+  preCacheUrls: PRE_CACHE_URLS,
+  nanoid:VERSION,
+} = {{ sw }}
 
 const CACHE_KEYS = {
   PRE_CACHE: `precache-${VERSION}`,
   RUNTIME: `runtime-${VERSION}`,
 };
-
-// Assets to cache
-const PRE_CACHE_URLS = {{ pre-cache-urls }};
-
-// Assets to exclude from caching
-const EXCLUDED_URLS = [];
-
-// Array of ignored hosts
-const IGNORED_HOSTS = ['localhost'];
 
 // On install—as a dependency
 // https://web.dev/offline-cookbook/#on-install-as-dependency
