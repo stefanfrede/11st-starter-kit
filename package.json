@@ -46,7 +46,6 @@
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf build",
-    "lighthouse": "lighthouse http://localhost:8080 --output=html --output-path=./report.html --view",
     "serve": "serve --no-clipboard --listen 8080 dist",
     "dev": "run-s clean dev:*",
     "dev:snowpack": "snowpack dev",
@@ -73,7 +72,6 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.2.0",
     "husky": "^4.3.5",
-    "lighthouse": "^6.5.0",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
     "serve": "^11.3.2",

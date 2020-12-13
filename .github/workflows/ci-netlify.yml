@@ -1,0 +1,40 @@
+name: CI for Netlify sites
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Install & Build
+          run: |
+            npm ci
+            npm run build
+      - name: Lint
+          run: |
+            npm run lint
+      - name: Wait for the Netlify Preview
+        uses: jakepartusch/wait-for-netlify-action@v1
+        id: netlify
+        with:
+          site_name: '11st-starter-kit'
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: |
+            ${{ steps.netlify.outputs.url }}
+            ${{ steps.netlify.outputs.url }}/about/
+            ${{ steps.netlify.outputs.url }}/contact/
+          budgetPath: ./budget.json
+          uploadArtifacts: true

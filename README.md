@@ -43,11 +43,6 @@ npm run serve
 
 Open http://localhost:8080 to view it in the browser.
 
-```bash
-# get your lighthouse scores.
-npm run lighthouse
-```
-
 Your code is now ready to be deployed!
 
 ## Netlify
