@@ -29,7 +29,6 @@ module.exports = {
     out: 'dist',
   },
   devOptions: {
-    hmrDelay: 300,
     open: 'none',
   },
 };
