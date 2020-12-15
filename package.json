@@ -44,12 +44,9 @@
     "*.{js,html}": "eslint --fix"
   },
   "scripts": {
-    "clean": "rimraf build",
     "serve": "serve --no-clipboard --listen 8080 dist",
-    "dev": "run-s clean dev:*",
-    "dev:snowpack": "snowpack dev",
-    "build": "run-s clean build:*",
-    "build:snowpack": "snowpack build",
+    "dev": "snowpack dev",
+    "build": "snowpack build",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --ext .js --ext .html src/",
     "lint:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css",
@@ -91,7 +88,6 @@
     "postcss": "^8.2.1",
     "postcss-100vh-fix": "^1.0.2",
     "postcss-cli": "^8.3.1",
-    "rimraf": "^3.0.2",
     "snowpack": "^2.18.4",
     "tailwindcss": "^2.0.2"
   }

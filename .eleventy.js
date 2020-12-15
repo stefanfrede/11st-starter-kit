@@ -30,7 +30,7 @@ module.exports = function (config) {
   return {
     dir: {
       input: 'src',
-      output: 'build',
+      output: 'src/_site',
     },
     passthroughFileCopy: true,
     templateFormats: ['html', 'md', 'liquid'],

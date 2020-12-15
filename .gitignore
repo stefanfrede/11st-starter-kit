@@ -3,8 +3,7 @@ node_modules
 web_modules
 
 # build artefacts
-.build
-build
+src/_site
 dist
 
 # secrets
