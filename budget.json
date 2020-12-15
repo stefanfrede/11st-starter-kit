@@ -8,7 +8,7 @@
       },
       {
         "metric": "largest-contentful-paint",
-        "budget": 2000
+        "budget": 2500
       }
     ],
     "resourceSizes": [
