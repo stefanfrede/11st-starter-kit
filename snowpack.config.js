@@ -30,5 +30,6 @@ module.exports = {
       minify: true,
       target: 'es2020',
     },
+    source: 'skypack',
   },
 };
