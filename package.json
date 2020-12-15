@@ -43,7 +43,6 @@
     "*.{css,js,html}": "stylelint --fix",
     "*.{js,html}": "eslint --fix"
   },
-  "sideEffects": false,
   "scripts": {
     "clean": "rimraf build",
     "serve": "serve --no-clipboard --listen 8080 dist",
@@ -65,7 +64,6 @@
     "@commitlint/config-conventional": "^11.0.0",
     "babel-eslint": "^10.1.0",
     "browserslist": "^4.16.0",
-    "core-js": "^3.8.1",
     "eslint": "^7.15.0",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-html": "^6.1.1",
@@ -82,9 +80,6 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.10",
-    "@snowpack/plugin-optimize": "^0.2.10",
     "@snowpack/plugin-postcss": "^1.0.11",
     "@snowpack/plugin-run-script": "^2.2.1",
     "@tailwindcss/typography": "^0.3.1",
