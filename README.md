@@ -64,6 +64,16 @@ npm install -g netlify-cli
 netlify dev
 ```
 
+## Code Quality
+
+By default `CSS` and `JavaScript` is getting linted with every commit.
+
+You can lint manually by running `npm run lint` and if errors occur you can try to fix them automatically by running `npm run format`.
+
+With every pull request it is checked if the code can be build without errors and afterwards `CSS` and `JavaScript` is getting linted.
+
+Additionally each page is audited by Lighthouse which can take some time. You can find the performance budget for this audit in the file `./budget.json`.
+
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
