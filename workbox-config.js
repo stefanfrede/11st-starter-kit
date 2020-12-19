@@ -1,12 +1,9 @@
 module.exports = {
   cacheId: '11ststarterkit',
   globDirectory: 'dist/',
-  globPatterns: ['**/*.{css,html,js,json}'],
+  globPatterns: ['**/*.{css,js,json}'],
   swDest: 'dist/sw.js',
-  clientsClaim: true,
-  skipWaiting: true,
 
-  // Define runtime caching rules.
   runtimeCaching: [
     {
       urlPattern: /(?:\/)$/,
@@ -19,12 +16,23 @@ module.exports = {
       },
     },
     {
-      urlPattern: /\.(?:css|js)$/,
+      urlPattern: /^(https:\/\/rsms\.me\/inter\/).+(.css)$/,
       handler: 'StaleWhileRevalidate',
       options: {
-        cacheName: 'static',
+        cacheName: 'inter-font-stylesheet',
+      },
+    },
+    {
+      urlPattern: /^(https:\/\/rsms\.me\/inter\/font-files\/)/,
+      handler: 'CacheFirst',
+      options: {
+        cacheName: 'inter-font-webfont',
+        cacheableResponse: {
+          statuses: [0, 200],
+        },
         expiration: {
-          maxAgeSeconds: 60 * 60 * 24 * 7,
+          maxAgeSeconds: 60 * 60 * 24 * 365,
+          maxEntries: 30,
         },
       },
     },
@@ -35,17 +43,6 @@ module.exports = {
         cacheName: 'images',
         expiration: {
           maxAgeSeconds: 30 * 24 * 60 * 60,
-          maxEntries: 30,
-        },
-      },
-    },
-    {
-      urlPattern: /\.(?:eot|otf|ttf|woff|woff2)$/,
-      handler: 'CacheFirst',
-      options: {
-        cacheName: 'fonts',
-        expiration: {
-          maxAgeSeconds: 60 * 60 * 24 * 365,
           maxEntries: 30,
         },
       },
