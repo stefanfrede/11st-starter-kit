@@ -44,9 +44,12 @@
     "*.{js,html}": "eslint --fix"
   },
   "scripts": {
+    "clean": "rimraf src/_site",
     "serve": "serve --no-clipboard --listen 8080 dist",
     "dev": "snowpack dev",
-    "build": "snowpack build",
+    "build": "run-s clean build:*",
+    "build:snowpack": "snowpack build",
+    "build:sw": "workbox generateSW",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --ext .js --ext .html src/",
     "lint:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css",
@@ -83,11 +86,12 @@
     "alpinejs": "^2.8.0",
     "autoprefixer": "^10.1.0",
     "canvas-confetti": "^1.3.2",
-    "nanoid": "^3.1.20",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.1",
     "postcss-cli": "^8.3.1",
+    "rimraf": "^3.0.2",
     "snowpack": "^2.18.5",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.2",
+    "workbox-cli": "^6.0.2"
   }
 }
