@@ -3,10 +3,10 @@
   publish = "dist"
 
 [context.production]
-  environment = { NODE_VERSION = "12.20.0", NODE_ENV = "production", RUBY_VERSION = "2.7.1" }
+  environment = { NODE_VERSION = "14.15.3", NODE_ENV = "production", RUBY_VERSION = "2.7.1" }
 
 [context.deploy-preview]
-  environment = { NODE_VERSION = "12.20.0", NODE_ENV = "production", RUBY_VERSION = "2.7.1" }
+  environment = { NODE_VERSION = "14.15.3", NODE_ENV = "production", RUBY_VERSION = "2.7.1" }
 
 [dev]
   command = "npm run dev"
