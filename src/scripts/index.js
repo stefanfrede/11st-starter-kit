@@ -11,8 +11,10 @@ if (canvas) {
   })({ particleCount: 100, spread: 160 });
 }
 
+const env = document.querySelector('body').dataset.env;
+
 // Check that service workers are supported
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && env === 'production') {
   // use the window load event to keep the page load performant
   window.addEventListener('load', () => {
     try {

@@ -3,7 +3,10 @@
   <head>
     {% include "partials/site-head.html" %}
   </head>
-  <body class="grid grid-rows-layout min-h-screen bg-white">
+  <body
+    class="grid grid-rows-layout min-h-screen bg-white"
+    data-env="{{ node.env }}"
+  >
     {% include "partials/site-header.html" %}
 
     <main id="main-content" tabindex="-1">

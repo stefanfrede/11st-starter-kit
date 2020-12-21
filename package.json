@@ -46,8 +46,9 @@
   "scripts": {
     "clean": "rimraf src/_site",
     "serve": "serve --no-clipboard --listen 8080 dist",
-    "dev": "snowpack dev",
-    "build": "run-s clean build:*",
+    "dev": "NODE_ENV=development run-s clean dev:*",
+    "dev:snowpack": "snowpack dev",
+    "build": "NODE_ENV=production run-s clean build:*",
     "build:snowpack": "snowpack build",
     "build:sw": "workbox generateSW",
     "lint": "run-s lint:*",
