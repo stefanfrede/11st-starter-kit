@@ -64,7 +64,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "babel-eslint": "^10.1.0",
-    "browserslist": "^4.16.0",
+    "browserslist": "^4.16.1",
     "eslint": "^7.17.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-html": "^6.1.1",
