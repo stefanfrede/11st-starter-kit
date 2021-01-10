@@ -6,6 +6,8 @@
   <body
     class="grid grid-rows-layout min-h-screen bg-white"
     data-env="{{ node.env }}"
+    x-data="{ open: false }"
+    x-init="() => { setTimeout(() => { open = true }, 1500); }"
   >
     {% include "partials/site-header.html" %}
 
@@ -14,6 +16,8 @@
     </main>
 
     {% include "partials/site-footer.html" %}
+
+    {% include "partials/banner.html" %}
 
     <script type="module" src="/scripts/index.js"></script>
   </body>

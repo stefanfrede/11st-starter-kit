@@ -1,0 +1,80 @@
+<div
+  x-show="open"
+  x-description="Banner, show/hide based on modal state."
+  x-transition:enter="ease-out duration-300"
+  x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+  x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+  x-transition:leave="ease-in duration-200"
+  x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+  x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+  class="fixed bottom-0 inset-x-0 pb-2 sm:pb-5"
+>
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="p-2 rounded-lg bg-gray-600 shadow-lg sm:p-3">
+      <div class="flex items-center justify-between flex-wrap">
+        <div class="w-0 flex-1 flex items-center">
+          <span class="flex p-2 rounded-lg bg-gray-800">
+            <svg
+              class="h-6 text-white"
+              aria-hidden="true"
+              focusable="false"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+            >
+              <path
+                fill="currentColor"
+                d="M576 240c0-23.63-12.95-44.04-32-55.12V32.01C544 23.26 537.02
+                0 512 0c-7.12 0-14.19 2.38-19.98 7.02l-85.03 68.03C364.28 109.19
+                310.66 128 256 128H64c-35.35 0-64 28.65-64 64v96c0 35.35 28.65
+                64 64 64h33.7c-1.39 10.48-2.18 21.14-2.18 32 0 39.77 9.26 77.35
+                25.56 110.94 5.19 10.69 16.52 17.06 28.4 17.06h74.28c26.05 0
+                41.69-29.84 25.9-50.56-16.4-21.52-26.15-48.36-26.15-77.44
+                0-11.11 1.62-21.79 4.41-32H256c54.66 0 108.28 18.81 150.98
+                52.95l85.03 68.03a32.023 32.023 0 0 0 19.98 7.02c24.92 0
+                32-22.78 32-32V295.13C563.05 284.04 576 263.63 576 240zm-96
+                141.42l-33.05-26.44C392.95 311.78 325.12 288 256 288v-96c69.12 0
+                136.95-23.78 190.95-66.98L480 98.58v282.84z"
+              />
+            </svg>
+          </span>
+          <p class="ml-3 font-medium text-white truncate">
+            Alpine.js is up and running!
+          </p>
+        </div>
+        <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
+          <button
+            @click="open = false"
+            type="button"
+            class="-mr-1 flex p-2 rounded-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+          >
+            <span class="sr-only">
+              Dismiss
+            </span>
+            <svg
+              class="h-6 w-6 text-white"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="times"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 352 512"
+            >
+              <path
+                fill="currentColor"
+                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19
+                0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28
+                75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28
+                12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28
+                12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28
+                44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48
+                0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
