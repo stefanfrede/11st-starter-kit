@@ -1,12 +1,3 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
-@layer components {
-  .canvas-confetti {
-    @apply block max-w-full;
-
-    height: 420px;
-    width: 720px;
-  }
-}

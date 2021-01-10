@@ -34,7 +34,5 @@ jobs:
         with:
           urls: |
             ${{ steps.netlify.outputs.url }}
-            ${{ steps.netlify.outputs.url }}/about/
-            ${{ steps.netlify.outputs.url }}/contact/
           budgetPath: ./budget.json
           uploadArtifacts: true

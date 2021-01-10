@@ -18,12 +18,6 @@ module.exports = {
       gridTemplateRows: {
         layout: 'auto 1fr auto',
       },
-      inset: {
-        '-20': '-5rem',
-      },
-      margin: {
-        '-1px': '-1px',
-      },
     },
   },
   variants: {
