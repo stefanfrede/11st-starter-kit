@@ -87,7 +87,7 @@
     "alpinejs": "^2.8.0",
     "autoprefixer": "^10.2.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.2.3",
+    "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",
     "rimraf": "^3.0.2",
     "snowpack": "^2.18.5",
