@@ -90,7 +90,7 @@
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",
     "rimraf": "^3.0.2",
-    "snowpack": "^3.0.5",
+    "snowpack": "^3.0.7",
     "tailwindcss": "^2.0.2",
     "workbox-cli": "^6.0.2"
   }
