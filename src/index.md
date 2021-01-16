@@ -6,15 +6,29 @@ meta:
     '11st-Starter-Kit is a minimal starting point for building static websites
     with 11ty, powered by Snowpack with Tailwind CSS and Alpine.js.'
 intro:
-  title: '11st-Starter-Kit'
+  title: 'Welcome to Your Eleventy App'
   desc:
-    '11st-Starter-Kit is a minimal starting point for building static websites
-    with 11ty, powered by Snowpack with Tailwind CSS and Alpine.js.'
+    'For a guide and recipes on how to configure / customize this project, check
+    out the <a href="https://www.11ty.dev/docs/" class="text-green-600
+    hover:text-green-700 font-medium underline">Eleventy</a> and <a
+    href="https://www.snowpack.dev/" class="text-green-600 hover:text-green-700
+    font-medium underline">Snowpack</a> documentation.'
 ---
 
-To get your own instance of this [Eleventy](https://11ty.io) starter project
-cloned and deploying to [Netlify](https://www.netlify.com) very quickly, just
-click the button below and follow the instructions.
+## Community
 
-[![Deploy to Netlify](/images/deploy-to-netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/stefanfrede/11st-starter-kit)
+[Eleventy](https://www.11ty.dev/news/discord/) -
+[Snowpack](https://discord.com/invite/snowpack) - [Tailwind
+CSS](https://tailwindcss.com/discord) - [Alpine.js](https://discord.gg/CGmj5nq)
 
+## Awesome
+
+[Eleventy](https://github.com/scottishstoater/awesome-eleventy) -
+[Snowpack](https://github.com/rajasegar/awesome-snowpack) - [Tailwind
+CSS](https://github.com/aniftyco/awesome-tailwindcss) -
+[Alpine.js](https://github.com/alpine-collective/awesome)
+
+## Ecosystem
+
+[Eleventy](https://www.11ty.dev/) - [Snowpack](https://www.snowpack.dev/) -
+[Tailwind CSS](https://tailwindcss.com/) - [Alpine.js](https://github.com/alpinejs/alpine/)

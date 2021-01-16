@@ -4,18 +4,16 @@
     {% include "partials/site-head.html" %}
   </head>
   <body
-    class="grid grid-rows-layout min-h-screen bg-white"
+    class="min-h-screen bg-white"
     data-env="{{ node.env }}"
     x-data="{ open: false }"
     x-init="() => { setTimeout(() => { open = true }, 1500); }"
   >
     {% include "partials/site-header.html" %}
 
-    <main id="main-content" tabindex="-1">
+    <div class="py-10">
       {% block content %}{% endblock %}
-    </main>
-
-    {% include "partials/site-footer.html" %}
+    </div>
 
     {% include "partials/banner.html" %}
 

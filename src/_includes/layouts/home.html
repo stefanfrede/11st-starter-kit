@@ -1,24 +1,23 @@
 {% layout 'base.html' %}
 
 {% block content %}
-<div class="bg-gray-900 mb-6">
-  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="py-10">
-      <h2
-        class="mt-2 mb-8 text-3xl text-gray-100 leading-8 font-extrabold tracking-tight sm:text-4xl sm:leading-10"
-      >
-        {{ intro.title }}
-      </h2>
-
-      <p class="text-xl text-gray-300 leading-8">
+<header>
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-bold leading-tight text-gray-900">
+      {{ intro.title }}
+    </h1>
+  </div>
+</header>
+<main id="main-content" tabindex="-1">
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="py-8 text-gray-600 leading-8">
+      <p class="text-xl">
         {{ intro.desc }}
       </p>
     </div>
-  </section>
-</div>
-<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-  <div class="prose prose-black prose-lg text-gray-500">
-    {{ content }}
+    <div class="prose prose-green prose-lg text-gray-500">
+      {{ content }}
+    </div>
   </div>
-</section>
+</main>
 {% endblock %}

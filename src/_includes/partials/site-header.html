@@ -1,13 +1,40 @@
-<header role="banner">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex h-16">
-      <a
-        href="/"
-        aria-label="{{ site.name }}"
-        class="inline-flex flex-shrink-0 items-center space-x-2 sm:space-x-3"
-      >
-        {% include "partials/site-header-logo.html" %}
-      </a>
-    </div>
+<nav class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex justify-between items-center h-16">
+    <figure class="flex flex-shrink-0 items-center space-x-1">
+      <img
+        alt="11st starter-kit logo"
+        class="h-8 w-auto"
+        src="/images/11st-logo.svg"
+      />
+      <figcaption>Starter-Kit</figcaption>
+    </figure>
+    <ul class="flex space-x-4">
+      {% for item in navigation.items %}
+        {% if item.url == page.url %}
+          {% assign highlight = 'text-green-600' %}
+          {% assign current = 'aria-current="page"' %}
+        {% else %}
+          {% assign highlight = 'hover:text-green-700' %}
+          {% assign current = '' %}
+        {% endif %}
+        <li>
+          <a
+            href="{{ item.url }}"
+            class="text-base font-bold underline {{ highlight }}"
+            {{ current }}
+          >
+            {{ item.text }}
+          </a>
+        </li>
+      {% endfor %}
+      <li>
+        <a
+          href="https://github.com/stefanfrede/11st-starter-kit/"
+          class="text-base font-bold underline hover:text-green-700"
+        >
+          GitHub
+        </a>
+      </li>
+    </ul>
   </div>
-</header>
+</nav>
