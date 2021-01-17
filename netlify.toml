@@ -3,10 +3,10 @@
   publish = "dist"
 
 [context.production]
-  environment = { NODE_VERSION = "14.15.3", NODE_ENV = "production", RUBY_VERSION = "2.7.1" }
+  environment = { NODE_VERSION = "14.15.3", RUBY_VERSION = "2.7.1" }
 
 [context.deploy-preview]
-  environment = { NODE_VERSION = "14.15.3", NODE_ENV = "production", RUBY_VERSION = "2.7.1" }
+  environment = { NODE_VERSION = "14.15.3", RUBY_VERSION = "2.7.1" }
 
 [dev]
   command = "npm run dev"
@@ -14,7 +14,6 @@
   port = 3000
   targetPort = 8080
   framework = "#custom"
-  NODE_ENV = "development"
 
 [[headers]]
   for = "/*"
