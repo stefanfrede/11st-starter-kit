@@ -67,7 +67,7 @@
     "@snowpack/plugin-postcss": "^1.1.0",
     "@snowpack/plugin-run-script": "^2.3.0",
     "@tailwindcss/typography": "^0.4.0",
-    "autoprefixer": "^10.2.1",
+    "autoprefixer": "^10.2.3",
     "babel-eslint": "^10.1.0",
     "browserslist": "^4.16.1",
     "eslint": "^7.18.0",
