@@ -11,10 +11,10 @@
     <ul class="flex space-x-4">
       {% for item in navigation.items %}
         {% if item.url == page.url %}
-          {% assign highlight = 'text-green-600' %}
+          {% assign highlight = 'text-green-700' %}
           {% assign current = 'aria-current="page"' %}
         {% else %}
-          {% assign highlight = 'hover:text-green-700' %}
+          {% assign highlight = 'hover:text-green-900' %}
           {% assign current = '' %}
         {% endif %}
         <li>
@@ -30,7 +30,7 @@
       <li>
         <a
           href="https://github.com/stefanfrede/11st-starter-kit/"
-          class="text-base font-bold underline hover:text-green-700"
+          class="text-base font-bold underline hover:text-green-900"
         >
           GitHub
         </a>

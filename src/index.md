@@ -9,10 +9,9 @@ intro:
   title: 'Welcome to Your Eleventy App'
   desc:
     'For a guide and recipes on how to configure / customize this project, check
-    out the <a href="https://www.11ty.dev/docs/" class="text-green-600
-    hover:text-green-700 font-medium underline">Eleventy</a> and <a
-    href="https://www.snowpack.dev/" class="text-green-600 hover:text-green-700
-    font-medium underline">Snowpack</a> documentation.'
+    out the <a href="https://www.11ty.dev/docs/" class="text-gray-900
+    font-medium underline">Eleventy</a> and <a href="https://www.snowpack.dev/"
+    class="text-gray-900 font-medium underline">Snowpack</a> documentation.'
 ---
 
 ## Community
