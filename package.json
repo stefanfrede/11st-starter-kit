@@ -87,7 +87,7 @@
     "snowpack": "^3.0.13",
     "stylelint": "^13.11.0",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-standard": "^21.0.0",
     "stylelint-order": "^4.1.0",
     "tailwindcss": "^2.0.3",
     "workbox-cli": "^6.1.1"
