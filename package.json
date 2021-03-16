@@ -90,7 +90,7 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-order": "^4.1.0",
     "tailwindcss": "^2.0.3",
-    "workbox-cli": "^6.1.1"
+    "workbox-cli": "^6.1.2"
   },
   "dependencies": {
     "alpinejs": "^2.8.1"
