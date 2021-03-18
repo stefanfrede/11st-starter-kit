@@ -89,7 +89,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-order": "^4.1.0",
-    "tailwindcss": "^2.0.3",
+    "tailwindcss": "^2.0.4",
     "workbox-cli": "^6.1.1"
   },
   "dependencies": {
