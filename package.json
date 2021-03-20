@@ -61,7 +61,7 @@
     "setup": "npm install && npm run validate"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^0.12.1",
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
     "@snowpack/plugin-postcss": "^1.1.0",
