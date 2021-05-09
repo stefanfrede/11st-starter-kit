@@ -33,12 +33,6 @@
     "maintained node versions",
     "> 5%"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "*.{css,js,html}": "stylelint --fix",
     "*.{js,html}": "eslint --fix"
@@ -58,7 +52,8 @@
     "format:eslint": "eslint --ext .js,.html src/ --fix",
     "format:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css --fix",
     "validate": "run-s build lint",
-    "setup": "npm install && npm run validate"
+    "setup": "npm install && npm run validate",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
@@ -77,7 +72,7 @@
     "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.4.0",
-    "husky": "^4.3.8",
+    "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.14",
