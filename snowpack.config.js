@@ -16,7 +16,6 @@ module.exports = {
   ],
   packageOptions: {
     NODE_ENV: true,
-    source: 'remote',
   },
   buildOptions: {
     clean: true,
