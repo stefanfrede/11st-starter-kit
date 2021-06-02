@@ -82,7 +82,7 @@
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "serve": "^11.3.2",
-    "snowpack": "^3.5.0",
+    "snowpack": "^3.5.4",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
