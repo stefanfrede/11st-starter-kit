@@ -1,4 +1,8 @@
-import 'alpinejs';
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();
 
 const env = document.querySelector('body').dataset.env;
 
