@@ -92,6 +92,6 @@
     "workbox-cli": "^6.1.5"
   },
   "dependencies": {
-    "alpinejs": "^3.0.1"
+    "alpinejs": "^3.2.1"
   }
 }
