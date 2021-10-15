@@ -6,14 +6,15 @@
     "plugin:import/warnings",
     "plugin:prettier/recommended"
   ],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
     "allowImportExportEverywhere": true,
     "ecmaFeatures": {
       "impliedStrict": true
-    }
+    },
+    "requireConfigFile": false
   },
   "env": {
     "browser": true,
