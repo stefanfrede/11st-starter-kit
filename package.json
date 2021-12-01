@@ -34,7 +34,7 @@
     "> 5%"
   ],
   "lint-staged": {
-    "*.{css,js,html}": "stylelint --fix",
+    "*.{css,html}": "stylelint --fix",
     "*.{js,html}": "eslint --fix"
   },
   "scripts": {
@@ -49,10 +49,10 @@
     "build:sw": "workbox generateSW",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --ext .js,.html src/",
-    "lint:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css",
+    "lint:stylelint": "stylelint src/**/*.html src/**/*.css",
     "format": "run-s format:*",
     "format:eslint": "eslint --ext .js,.html src/ --fix",
-    "format:stylelint": "stylelint src/**/*.js src/**/*.html src/**/*.css --fix",
+    "format:stylelint": "stylelint src/**/*.html src/**/*.css --fix",
     "validate": "run-s build lint",
     "setup": "npm install && npm run validate",
     "prepare": "husky install"
