@@ -7,13 +7,6 @@ module.exports = {
   plugins: [
     '@snowpack/plugin-postcss',
     '@jadex/snowpack-plugin-tailwindcss-jit',
-    [
-      '@snowpack/plugin-run-script',
-      {
-        cmd: 'eleventy',
-        watch: '$1 --watch',
-      },
-    ],
   ],
   packageOptions: {
     NODE_ENV: true,
