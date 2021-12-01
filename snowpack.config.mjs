@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   mount: {
     'src/_site': { url: '/', static: true },
     'src/scripts': { url: '/scripts' },
