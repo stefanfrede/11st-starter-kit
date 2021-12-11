@@ -4,10 +4,7 @@ export default {
     'src/scripts': { url: '/scripts' },
     'src/styles': { url: '/styles' },
   },
-  plugins: [
-    '@snowpack/plugin-postcss',
-    '@jadex/snowpack-plugin-tailwindcss-jit',
-  ],
+  plugins: ['@snowpack/plugin-postcss'],
   packageOptions: {
     NODE_ENV: true,
   },
