@@ -25,6 +25,9 @@
     "html"
   ],
   "settings": {
-    "import/external-module-folders": ["node_modules", "web_modules"]
+    "import/external-module-folders": [
+      "node_modules",
+      "web_modules"
+    ]
   }
 }
