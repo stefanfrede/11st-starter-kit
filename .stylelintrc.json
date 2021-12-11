@@ -13,15 +13,18 @@
       "declarations"
     ],
     "order/properties-alphabetical-order": true,
-    "at-rule-no-unknown": [ true, {
-      ignoreAtRules: [
-        'apply',
-        'layer',
-        'responsive',
-        'screen',
-        'tailwind',
-        'variants'
-      ]
-    }]
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "apply",
+          "layer",
+          "responsive",
+          "screen",
+          "tailwind",
+          "variants"
+        ]
+      }
+    ]
   }
 }
