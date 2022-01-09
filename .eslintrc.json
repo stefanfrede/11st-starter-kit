@@ -5,11 +5,13 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:compat/recommended",
+    "plugin:json/recommended",
+    "plugin:promise/recommended",
     "plugin:prettier/recommended"
   ],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 2020,
+    "ecmaVersion": "latest",
     "sourceType": "module",
     "allowImportExportEverywhere": true,
     "ecmaFeatures": {
