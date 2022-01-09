@@ -13,11 +13,11 @@ dist
 *.log
 report.html
 
+# cache
+.eslintcache
+
 # macOS related files
 .DS_Store
-
-# version manager
-.tool-versions
 
 # Local Netlify folder
 .netlify
