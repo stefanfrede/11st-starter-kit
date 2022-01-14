@@ -94,7 +94,7 @@
     "workbox-cli": "^6.2.4"
   },
   "dependencies": {
-    "alpinejs": "^3.0.1",
+    "alpinejs": "^3.8.0",
     "core-js": "^3.20.2"
   }
 }
