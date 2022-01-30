@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ec6da587-72ba-490a-ad4b-167802a9c197/deploy-status)](https://app.netlify.com/sites/11st-starter-kit/deploys)
 
-[11ty](https://www.11ty.dev/), powered by [Snowpack](https://www.snowpack.dev/)
+[11ty](https://www.11ty.dev/), powered by [Vite](https://vitejs.dev/)
 with [Tailwind CSS](https://tailwindcss.com) and
 [Alpine.js](https://github.com/alpinejs/alpine/).
 
