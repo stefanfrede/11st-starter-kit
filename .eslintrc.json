@@ -23,9 +23,6 @@
     "node": true,
     "es6": true
   },
-  "plugins": [
-    "html"
-  ],
   "settings": {
     "import/external-module-folders": [
       "node_modules",
