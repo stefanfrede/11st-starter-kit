@@ -83,7 +83,6 @@
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "stylelint": "^14.1.0",
-    "stylelint-config-html": "^1.0.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^24.0.0",
     "stylelint-no-unsupported-browser-features": "^5.0.2",
