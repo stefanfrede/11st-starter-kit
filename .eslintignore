@@ -1,5 +1,5 @@
 dist/*
-src/_site/*
+_site/*
 
 # Override implicit ignore rules
 !.stylelintrc.json
