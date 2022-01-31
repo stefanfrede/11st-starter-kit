@@ -5,11 +5,6 @@ const { resolve } = require('path');
 
 export default defineConfig({
   root: '_site',
-  server: {
-    hmr: {
-      timeout: 300,
-    },
-  },
   build: {
     outDir: '../dist',
     rollupOptions: {
