@@ -22,14 +22,11 @@ the dependencies and validate that everything is running correctly.
 npm run dev
 ```
 
-Open http://localhost:8080 to view it in the browser.
+Open http://localhost:3000/ to view it in your browser.
 
 The page will reload if you make file changes.
 
 ### Production
-
-To increase the production performance builds are optimized via
-[@snowpack/plugin-optimize](https://github.com/pikapkg/snowpack/tree/master/plugins/plugin-optimize).
 
 ```bash
 # builds a static copy of your site to the `dist/` folder.
@@ -38,10 +35,10 @@ npm run build
 
 ```bash
 # serve the content from the `dist/` folder.
-npm run serve
+npm run preview
 ```
 
-Open http://localhost:8080 to view it in the browser.
+Open http://localhost:5000/ to view it in your browser.
 
 Your code is now ready to be deployed!
 
