@@ -30,11 +30,12 @@
   },
   "homepage": "https://11st-starter-kit.netlify.app",
   "lint-staged": {
-    "*.{css,html}": "stylelint --fix",
-    "*.{js,html}": "eslint --cache --fix"
+    "*.js": "eslint --cache --fix",
+    "*.css": "stylelint --fix"
   },
   "scripts": {
     "clean": "rimraf _site",
+    "prepare": "husky install",
     "preview": "npx vite preview",
     "predev": "run-s clean",
     "dev": "cross-env NODE_ENV=development run-p dev:*",
@@ -45,14 +46,13 @@
     "build:eleventy": "npx @11ty/eleventy",
     "build:vite": "npx vite build",
     "lint": "run-s lint:*",
-    "lint:eslint": "eslint --ext .js,.html src/",
-    "lint:stylelint": "stylelint src/**/*.html src/**/*.css",
+    "lint:eslint": "eslint --ext .js src/",
+    "lint:stylelint": "stylelint src/**/*.css",
     "format": "run-s format:*",
-    "format:eslint": "eslint --ext .js,.html src/ --fix",
-    "format:stylelint": "stylelint src/**/*.html src/**/*.css --fix",
+    "format:eslint": "eslint --ext .js src/ --fix",
+    "format:stylelint": "stylelint src/**/*.css --fix",
     "validate": "run-s build lint",
-    "setup": "npm install && npm run validate",
-    "prepare": "husky install"
+    "setup": "npm install && npm run validate"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
