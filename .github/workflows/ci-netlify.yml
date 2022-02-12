@@ -36,6 +36,7 @@ jobs:
         with:
           urls: |
             ${{ steps.waitFor200.outputs.url }}
+            ${{ steps.waitFor200.outputs.url }}/about/
           budgetPath: ./budget.json
           uploadArtifacts: true
           temporaryPublicStorage: true
