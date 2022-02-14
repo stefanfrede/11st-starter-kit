@@ -65,7 +65,7 @@
     "@babel/core": "^7.16.5",
     "@babel/eslint-parser": "^7.15.8",
     "@babel/preset-env": "^7.16.5",
-    "@commitlint/cli": "^16.0.1",
+    "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.0.0",
     "@tailwindcss/typography": "^0.5.0",
     "autoprefixer": "^10.2.4",
