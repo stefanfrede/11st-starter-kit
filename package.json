@@ -95,7 +95,7 @@
     "vite-plugin-pwa": "^0.11.13"
   },
   "dependencies": {
-    "alpinejs": "^3.0.1",
+    "alpinejs": "^3.10.2",
     "core-js": "^3.20.2",
     "vite": "^2.7.13"
   }
