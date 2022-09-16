@@ -51,6 +51,10 @@ Netlify very quickly, just click the button below and follow the instructions.
 
 ### Add some Netlify helpers
 
+### Contact Form
+
+if you want to add a contact form to this theme try [static website forms](https://fabform.io) from fabform.io
+
 Netlify Dev adds the ability to use Netlify redirects, proxies, and serverless functions.
 
 ```bash
