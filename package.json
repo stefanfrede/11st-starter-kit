@@ -1,10 +1,10 @@
 {
   "name": "11st-starter-kit",
   "description": "11ty, powered by Vite with Tailwind CSS and Alpine.js.",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "engines": {
-    "node": "16.x.x",
-    "npm": "8.x.x"
+    "node": "18.x.x",
+    "npm": "9.x.x"
   },
   "main": "index.js",
   "repository": {
@@ -42,12 +42,10 @@
     "preview": "npx vite preview",
     "predev": "run-s clean",
     "dev": "cross-env NODE_ENV=development run-p dev:*",
-    "dev:eleventy": "npx @11ty/eleventy --incremental --watch",
-    "dev:vite": "npx vite",
+    "dev:eleventy": "npx @11ty/eleventy --serve --incremental",
     "prebuild": "run-s clean",
     "build": "cross-env NODE_ENV=production run-s build:*",
     "build:eleventy": "npx @11ty/eleventy",
-    "build:vite": "npx vite build",
     "lint": "run-s lint:*",
     "lint:html": "npx prettier --check \"src/**/*.html\"",
     "lint:stylelint": "npx stylelint \"src/**/*.css\"",
@@ -60,7 +58,8 @@
     "setup": "npm install && npm run validate"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^2.0.0-beta.2",
+    "@11ty/eleventy-plugin-vite": "^4.0.0",
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.5",
     "@babel/eslint-parser": "^7.15.8",
@@ -92,10 +91,10 @@
     "stylelint-no-unsupported-browser-features": "^6.0.1",
     "stylelint-order": "^6.0.1",
     "tailwindcss": "^3.0.1",
-    "vite": "^4.0.4",
     "vite-plugin-pwa": "^0.14.1"
   },
   "dependencies": {
+    "@11ty/eleventy-upgrade-help": "^2.0.5",
     "alpinejs": "^3.0.1",
     "core-js": "^3.20.2"
   }

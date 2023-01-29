@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "dist"
+  publish = "_site"
 
 [context.production]
   environment = { NODE_VERSION = "16.13.2", RUBY_VERSION = "2.7.1" }
