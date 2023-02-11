@@ -1,5 +1,6 @@
 <div
-  x-show="open"
+  x-data="banner"
+  x-show="show"
   x-description="Banner, show/hide based on modal state."
   x-transition:enter="ease-out duration-300"
   x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
@@ -45,7 +46,7 @@
         </div>
         <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
           <button
-            @click="open = false"
+            @click="dismiss"
             type="button"
             class="-mr-1 flex rounded-md p-2 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
           >

@@ -3,12 +3,7 @@
   <head>
     {% include "partials/site-head.html" %}
   </head>
-  <body
-    class="min-h-screen bg-white"
-    data-env="{{ node.env }}"
-    x-data="{ open: false }"
-    x-init="() => { setTimeout(() => { open = true }, 1500); }"
-  >
+  <body class="min-h-screen bg-white" data-env="{{ node.env }}">
     {% include "partials/site-header.html" %}
 
     <div class="py-10">{% block content %}{% endblock %}</div>

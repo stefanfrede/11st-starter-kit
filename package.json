@@ -92,8 +92,8 @@
     "vite-plugin-pwa": "^0.14.1"
   },
   "dependencies": {
-    "@11ty/eleventy-upgrade-help": "^2.0.5",
-    "alpinejs": "^3.0.1",
+    "@alpinejs/persist": "^3.11.1",
+    "alpinejs": "^3.11.1",
     "core-js": "^3.20.2"
   }
 }
