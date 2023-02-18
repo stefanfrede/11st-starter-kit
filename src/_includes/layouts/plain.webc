@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="leading-tight text-gray-900 antialiased" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title webc:is="meta-title"></title>
+
+    <link webc:is="meta-canonical"></link>
+
+    <meta webc:is="meta-property"></meta>
+
+    <meta webc:is="meta-social"></meta>
+
+    <meta webc:is="meta-description"></meta>
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="48x48" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="192x192" />
+    <link rel="mask-icon" href="/favicon.svg" color="#4a5568" />
+
+    <meta name="theme-color" content="#4a5568" />
+
+    <!-- Preconnect to the font file origin -->
+    <link rel="preconnect" href="https://rsms.me" crossorigin />
+
+    <!-- Preload the font stylesheet asynchronously with low priority -->
+    <link rel="preload" href="https://rsms.me/inter/inter.css" as="style" />
+
+    <!-- https://www.filamentgroup.com/lab/load-css-simpler/ -->
+    <link
+      webc:keep
+      crossorigin="anonymous"
+      rel="stylesheet"
+      href="https://rsms.me/inter/inter.css"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
+  </head>
+  <body class="min-h-screen bg-white">
+    <div class="py-10" @html="content"></div>
+    <script type="module" src="/main.js" webc:keep></script>
+  </body>
+</html>

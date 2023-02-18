@@ -1,0 +1,5 @@
+<script webc:type="js" webc:is="template">
+  const href = `${site.url}${page.url}`;
+
+  `<link rel="canonical" href="${href}" />`;
+</script>

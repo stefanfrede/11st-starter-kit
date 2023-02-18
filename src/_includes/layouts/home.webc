@@ -1,0 +1,21 @@
+---
+layout: 'layouts/base.webc'
+---
+
+<main id="main-content" tabindex="-1">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-bold leading-tight text-gray-900">
+      <template @text="intro.title" webc:nokeep></template>
+    </h1>
+  </div>
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+    <div class="py-8 leading-8 text-gray-600">
+      <p class="text-xl">
+        <template @raw="intro.desc" webc:nokeep></template>
+      </p>
+    </div>
+    <div class="prose prose-lg prose-gray text-gray-500">
+      <template @raw="content" webc:nokeep></template>
+    </div>
+  </div>
+</main>

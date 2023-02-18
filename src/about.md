@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/home.html'
+layout: 'layouts/home.webc'
 title: 'Home'
 meta:
   desc:

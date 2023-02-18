@@ -1,4 +1,7 @@
-{% layout "layouts/plain.html" %} {% block content %}
+---
+layout: 'layouts/plain.webc'
+---
+
 <main class="flex min-h-screen items-center justify-center bg-red-700">
   <div
     class="mx-auto max-w-2xl py-16 px-4 text-center sm:py-20 sm:px-6 lg:px-8"
@@ -17,4 +20,3 @@
     </p>
   </div>
 </main>
-{% endblock %}

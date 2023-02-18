@@ -1,0 +1,54 @@
+<header>
+  <nav class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <figure class="flex flex-shrink-0 items-center space-x-1">
+        <img
+          alt="11st starter-kit logo"
+          class="h-8 w-auto"
+          src="/images/11st-logo.svg"
+          height="32"
+          width="32"
+        />
+        <figcaption>Starter-Kit</figcaption>
+      </figure>
+      <ul class="flex space-x-4">
+        <script webc:type="js" webc:is="template">
+          navigation.items
+            .map((item) => {
+              let current;
+              let highlight;
+
+              if (item.url === page.url) {
+                current = 'aria-current="page"';
+                highlight = 'cursor-default';
+              } else {
+                current = '';
+                highlight = 'underline';
+              }
+
+              return `
+                <li>
+                  <a
+                    href="${item.url}"
+                    class="text-base font-bold ${highlight}"
+                    ${current}
+                  >
+                    ${item.text}
+                  </a>
+                </li>
+              `}
+            )
+            .join('');
+        </script>
+        <li>
+          <a
+            href="https://github.com/stefanfrede/11st-starter-kit/"
+            class="text-base font-bold underline hover:text-green-900"
+          >
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

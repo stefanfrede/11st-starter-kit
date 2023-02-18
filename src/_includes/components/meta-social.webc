@@ -1,0 +1,17 @@
+<script webc:type="js" webc:is="template">
+  let socialImage;
+
+  if (social?.image) {
+    socialImage = `${site.url}/images/${social.image}`;
+  } else {
+    socialImage = `${site.url}/images/social-share.png`;
+  }
+
+  `
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="${socialImage}" />
+  <meta name="twitter:image" content="${socialImage}" />
+  <meta property="og:image:alt" content="Page image for ${site.name}" />
+  <meta name="twitter:image:alt" content="Page image for ${site.name}" />
+  `;
+</script>
