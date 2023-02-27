@@ -95,6 +95,6 @@
     "@11ty/eleventy-plugin-webc": "^0.8.1",
     "@alpinejs/persist": "^3.11.1",
     "alpinejs": "^3.11.1",
-    "core-js": "^3.20.2"
+    "core-js": "^3.29.0"
   }
 }
