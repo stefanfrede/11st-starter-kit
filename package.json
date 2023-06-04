@@ -58,8 +58,7 @@
     "setup": "npm install && npm run validate"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-beta.2",
-    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "@11ty/eleventy": "^2.0.1",
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.5",
     "@babel/eslint-parser": "^7.15.8",
@@ -83,16 +82,17 @@
     "postcss": "^8.2.14",
     "postcss-cli": "^10.0.0",
     "prettier": "^2.2.1",
-    "prettier-plugin-tailwindcss": "^0.2.2",
-    "rimraf": "^4.1.2",
+    "prettier-plugin-tailwindcss": "^0.3.0",
+    "rimraf": "^5.0.0",
     "stylelint": "^15.1.0",
-    "stylelint-config-standard": "^30.0.1",
+    "stylelint-config-standard": "^33.0.0",
     "stylelint-order": "^6.0.1",
     "tailwindcss": "^3.0.1",
-    "vite-plugin-pwa": "^0.14.1"
+    "vite-plugin-pwa": "^0.16.3"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-webc": "^0.8.1",
+    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "@11ty/eleventy-plugin-webc": "^0.11.1",
     "@alpinejs/persist": "^3.11.1",
     "alpinejs": "^3.11.1",
     "core-js": "^3.20.2"
