@@ -1,20 +1,20 @@
-<script webc:type="js" webc:is="template">
+<script webc:type="js">
   let propertyTitle;
 
-  if (meta.title) {
-    propertyTitle = meta.title;
+  if ($data.meta.title) {
+    propertyTitle = $data.meta.title;
   } else {
-    if (site.name === title) {
-      propertyTitle = title;
+    if ($data.site.name === $data.title) {
+      propertyTitle = $data.title;
     } else {
-      propertyTitle = `${title} :: ${site.name}`;
+      propertyTitle = `${$data.title} :: ${$data.site.name}`;
     }
   }
 
-  const propertyUrl = `${site.url}${page.url}`;
+  const propertyUrl = `${$data.site.url}${$data.page.url}`;
 
   `
-  <meta property="og:site_name" content="${site.name}" />
+  <meta property="og:site_name" content="${$data.site.name}" />
   <meta property="og:title" content="${propertyTitle}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="${propertyUrl}" />

@@ -1,10 +1,10 @@
-<script webc:type="js" webc:is="template">
+<script webc:type="js">
   let metaDesc;
 
-  if (meta?.desc) {
-    metaDesc = meta.desc;
+  if ($data.meta?.desc) {
+    metaDesc = $data.meta.desc;
   } else {
-    socialImage = `${site.url}/images/social-share.png`;
+    socialImage = `${$data.site.url}/images/social-share.png`;
     metaDesc = '';
   }
 
