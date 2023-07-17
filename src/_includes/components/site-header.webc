@@ -12,8 +12,11 @@
         <figcaption>Starter-Kit</figcaption>
       </figure>
       <ul class="flex space-x-4">
-        <script webc:type="js" webc:is="template">
-          navigation.items
+        <script webc:type="js">
+          const items = $data.navigation.items;
+          const page = $data.page;
+
+          items
             .map((item) => {
               let current;
               let highlight;

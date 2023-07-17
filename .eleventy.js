@@ -1,19 +1,19 @@
 const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
 const EleventyWebcPlugin = require('@11ty/eleventy-plugin-webc');
 
-module.exports = function (config) {
-  config.addPlugin(EleventyVitePlugin);
-  config.addPlugin(EleventyWebcPlugin, {
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyVitePlugin);
+  eleventyConfig.addPlugin(EleventyWebcPlugin, {
     components: 'src/_includes/components/**/*.webc',
   });
 
   // Static assets to pass through
-  config.addPassthroughCopy('./src/images');
-  config.addPassthroughCopy('./src/public');
-  config.addPassthroughCopy('./src/styles');
-  config.addPassthroughCopy('./src/main.js');
+  eleventyConfig.addPassthroughCopy('./src/images');
+  eleventyConfig.addPassthroughCopy('./src/public');
+  eleventyConfig.addPassthroughCopy('./src/styles');
+  eleventyConfig.addPassthroughCopy('./src/main.js');
 
-  config.setServerOptions({
+  eleventyConfig.setServerOptions({
     // Default values are shown:
 
     // Whether the live reload snippet is used

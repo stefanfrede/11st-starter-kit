@@ -1,13 +1,13 @@
-<script webc:type="js" webc:is="template">
+<script webc:type="js">
   let metaTitle;
 
-  if (meta.title) {
-    metaTitle = meta.title;
+  if ($data.meta.title) {
+    metaTitle = $data.meta.title;
   } else {
-    if (site.name === title) {
-      metaTitle = title;
+    if ($data.site.name === $data.title) {
+      metaTitle = $data.title;
     } else {
-      metaTitle = `${title} :: ${site.name}`;
+      metaTitle = `${$data.title} :: ${$data.site.name}`;
     }
   }
 
