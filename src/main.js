@@ -7,24 +7,26 @@ window.Alpine = Alpine;
 
 Alpine.plugin(persist);
 
-Alpine.data('banner', function () {
-  return {
-    show: this.$persist(false),
-    dismissed: this.$persist(false),
+document.addEventListener('alpine:init', () => {
+  Alpine.data('banner', function () {
+    return {
+      show: this.$persist(false),
+      dismissed: this.$persist(false),
 
-    dismiss() {
-      this.show = false;
-      this.dismissed = true;
-    },
+      dismiss() {
+        this.show = false;
+        this.dismissed = true;
+      },
 
-    init() {
-      if (!this.dismissed) {
-        setTimeout(() => {
-          this.show = true;
-        }, 1500);
-      }
-    },
-  };
+      init() {
+        if (!this.dismissed) {
+          setTimeout(() => {
+            this.show = true;
+          }, 1500);
+        }
+      },
+    };
+  });
 });
 
 Alpine.start();
